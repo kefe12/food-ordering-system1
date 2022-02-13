@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title></title>
+    </h:head>
+    <h:body>
+     
+    </h:body>
+    <h:form>
+        <h:panelGrid  columns="2" style="background-color: yellowgreen">
+            Enter your id:<h:inputText id="id" value="#{obj.customerid}"></h:inputText>
+        Enter your Name:<h:inputText id="name" value="#{obj.name}"></h:inputText>
+        Enter your email:<h:inputText id="email" value="#{obj.email}"></h:inputText>
+        Enter your password:<h:inputText id="pass" value="#{obj.pass}"></h:inputText>
+        Enter your address<h:inputText id="adress" value="#{obj.adress}"></h:inputText>
+        confirm password:<h:inputText id="conpass" value="#{obj.conpass}"></h:inputText>
+        Enter  contact:<h:inputText id="contact" value="#{obj.contact}"></h:inputText>
+        Enter  user:<h:inputText id="usertype" value="#{obj.usertype}"></h:inputText>
+        <h:commandButton id="submit" value="insert" action="#{obj.addCat()}"></h:commandButton>
+        </h:panelGrid>
+        <br/>
+        
+    </h:form>
+</html>
+

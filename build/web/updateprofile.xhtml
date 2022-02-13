@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+        <h:head>
+        <title>WELCOME TO FOOD PLAZA</title>
+    </h:head>
+    <h:body >
+        <h:form>
+            <h3>WELCOME TO FOOD PLAZA</h3>
+            <h3>  
+            </h3> 
+            
+                <h:selectOneRadio id="customerorAdmin">
+                    <f:selectItem itemValue="customer" itemLabel="Customer" value="#{updatevalidator.customerid}"  />
+                 
+                    <f:selectItem itemValue="Admin" itemLabel="Admin" value="#{updatevalidator.adminid}" />
+                        
+                </h:selectOneRadio> 
+              <h:panelGrid columns="3" >
+                <h:outputLabel value="Name:"/>
+                <h:inputText id="nametext" value="#{updatevalidator.name}" required="true" requiredMessage="name is required"  >
+                    <f:validateRequired></f:validateRequired>
+                </h:inputText>
+                 <h:message for="nametext" style="color:red"/>
+               
+                <h:outputLabel value="Address:"/>
+                <h:inputText id="adresstext"  value="#{updatevalidator.adress}" required="true" requiredMessage="adress is required" >
+                    <f:validateRequired></f:validateRequired>   
+                </h:inputText>
+                 <h:message for="adresstext" style="color:red"/>
+                <h:outputLabel value="Contact No:"/>
+                <h:inputText id="contacttext"  value="#{updatevalidator.contact}" required="true" requiredMessage="contact is required" validatorMessage="*">
+                    <f:validateLength minimum="10" maximum="10"></f:validateLength>
+                    
+                </h:inputText>
+                 <h:message for="contacttext" style="color:red"/>
+                <h:outputLabel value="Email"/>
+                <h:inputText id="emailtext" value="#{updatevalidator.email}"  required="true" requiredMessage="email is required" validatorMessage="*" >
+ <f:validateLength minimum="8" maximum="15"></f:validateLength>
+                </h:inputText>
+                 <h:message for="emailtext" style="color:red"/>
+    <h:outputLabel value="password"/>
+    <h:inputSecret id="passwordtext" value="#{updatevalidator.pass}"  required="true" requiredMessage="password is required" validatorMessage="*" > 
+        <f:validateLength minimum="8" maximum="15"></f:validateLength>
+    </h:inputSecret>
+     <h:message for="passwordtext" style="color:red"/>
+        <h:outputLabel value="confirm password"/>
+        <h:inputSecret id="cpasswordtext" value="#{updatevalidator.conpass}" required="true" requiredMessage="confirm the password"  validatorMessage="*" > 
+        <f:validateLength minimum="8" maximum="15"></f:validateLength>
+    </h:inputSecret>
+         <h:message for="cpasswordtext" style="color:red"/>
+         <h:commandButton id="Registerb" value="update"  />
+         <h:outputText style="color: red" value="#{updatevalidator.response}"/>
+            </h:panelGrid>
+            
+        </h:form>
+    </h:body>
+</html>
+    
+

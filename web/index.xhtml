@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+  >
+    <h:head>
+        <title>Welcome to Food Plaza</title>
+        <style>
+            .Bimage{height: 100%;  background-image:url("resources/image/foodimage2.jpg"); }
+        </style>
+
+    </h:head>
+    <h:body   >
+        
+        <h:form>
+            <h3>WELCOME TO FOOD PLAZA
+            </h3>
+            <h:panelGrid columns="2" >
+                <h:commandButton value="SIGN UP" action="register"/>
+                <h:commandButton value="LOGIN" action="login"/>
+                </h:panelGrid> 
+              </h:form>
+        <h:panelGrid >
+            <h:graphicImage value="resources/image/foodimagepng.png">
+            </h:graphicImage>
+        </h:panelGrid>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:commandButton value="SHOW AVAILABLE FOODS" action="menu1"  />
+                <h:commandButton value="FORGET PASSWORD"/>
+        </h:panelGrid>
+     
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <Resource id="jdbc" type="javax.sql.DataSource">#Thu Feb 10 22:16:23 GMT 2022
+jdbcDriver=com.mysql.cj.jdbc.Driver
+password=
+userName=root
+jdbcUrl=jdbc\:mysql\://localhost\:3306/cc?zeroDateTimeBehavior\=CONVERT_TO_NULL
+</Resource>
+</resources>
